@@ -1,0 +1,7 @@
+@use "../variables.scss";
+
+.jarp-btn {
+  background-color: variables.$primary500;
+  color: variables.$grey100;
+  padding: 1rem 0.5rem;
+}
