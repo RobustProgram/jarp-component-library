@@ -1,1 +1,3 @@
-export interface ButtonProps extends React.HTMLAttributes<HTMLDivElement> {}
+export interface ButtonProps {
+  label: string;
+}
