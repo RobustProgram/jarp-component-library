@@ -9,7 +9,10 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = (children) => <Button>{children}</Button>;
+const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.children = 'Click Me';
+Primary.args = {
+  primary: true,
+  label: 'Click Me',
+};
