@@ -5,10 +5,11 @@ import { ButtonProps } from './Button.types';
 
 import './Button.scss';
 
-function Button({ primary, label }: ButtonProps) {
+function Button({ primary, error, label }: ButtonProps) {
   const className = classNames({
     'jarp-btn': true,
     primary,
+    error,
   });
   return <button className={className}>{label}</button>;
 }

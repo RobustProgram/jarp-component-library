@@ -11,8 +11,21 @@ export default {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  label: 'Click Me',
+};
+
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
+  error: false,
+  label: 'Click Me',
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  primary: false,
+  error: true,
   label: 'Click Me',
 };

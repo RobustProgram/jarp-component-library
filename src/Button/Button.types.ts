@@ -1,4 +1,5 @@
 export interface ButtonProps {
-  primary: boolean;
+  primary?: boolean;
+  error?: boolean;
   label: string;
 }
