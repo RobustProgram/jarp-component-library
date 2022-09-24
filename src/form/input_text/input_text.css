@@ -1,0 +1,6 @@
+@value textBody from '../../typography/typography.css';
+
+.inputText {
+  composes: textBody;
+  padding: 0.25rem;
+}

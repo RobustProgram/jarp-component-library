@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, ButtonProps, ButtonType } from './button';
 
 export default {
-  title: 'Example/Button',
+  title: 'Base Components/Button',
   component: Button,
 } as Meta;
 
