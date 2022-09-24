@@ -1,0 +1,45 @@
+@value grey300, grey500, primary100, primary500, primary700, red100, red500, red700 from '../colors/colors.css';
+@value textBody from '../typography/typography.css';
+
+.button {
+  composes: textBody;
+  background-color: transparent;
+  border: 0.125rem solid primary500;
+  color: primary500;
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+.button:hover {
+  border: 0.125rem solid primary700;
+  color: primary700;
+}
+
+.button.primary {
+  background-color: primary500;
+  color: primary100;
+}
+
+.button.primary:hover {
+  border: 0.125rem solid primary700;
+  background-color: primary700;
+}
+
+.button.error {
+  background-color: red500;
+  border: 0.125rem solid red500;
+  color: red100;
+}
+
+.button.error:hover {
+  background-color: red700;
+  border: 0.125rem solid red700;
+}
+
+.button.disabled,
+.button:disabled {
+  background-color: grey500;
+  border: 0.125rem solid grey500;
+  color: grey300;
+  cursor: default;
+}

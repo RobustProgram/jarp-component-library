@@ -1,0 +1,10 @@
+@import '@fontsource/amatic-sc';
+@import '@fontsource/josefin-sans';
+
+.textHeader {
+  font-family: 'Amatic SC', cursive;
+}
+
+.textBody {
+  font-family: 'Josefin Sans', sans-serif;
+}

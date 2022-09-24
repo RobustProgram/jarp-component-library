@@ -1,8 +1,6 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react';
-
-import Button from './Button';
-import { ButtonProps } from './Button.types';
+import React from 'react';
+import { Button, ButtonProps, ButtonType } from './button';
 
 export default {
   title: 'Example/Button',
@@ -13,19 +11,24 @@ const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Click Me',
+  children: 'Click Me',
 };
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  error: false,
-  label: 'Click Me',
+  children: 'Click Me',
+  variant: ButtonType.PRIMARY,
 };
 
 export const Error = Template.bind({});
 Error.args = {
-  primary: false,
-  error: true,
-  label: 'Click Me',
+  children: 'Click Me',
+  variant: ButtonType.ERROR,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Click Me',
+  disabled: true,
+  variant: ButtonType.PRIMARY,
 };

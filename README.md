@@ -1,1 +1,0 @@
-# JARP Component Library

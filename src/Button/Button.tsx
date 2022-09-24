@@ -1,17 +1,34 @@
-import React from 'react';
-import classNames from 'classnames';
+import classnames from 'classnames';
+import * as React from 'react';
+import styles from './button.css';
 
-import { ButtonProps } from './Button.types';
-
-import './Button.scss';
-
-function Button({ primary, error, label }: ButtonProps) {
-  const className = classNames({
-    'jarp-btn': true,
-    primary,
-    error,
-  });
-  return <button className={className}>{label}</button>;
+export enum ButtonType {
+  PRIMARY = 'primary',
+  ERROR = 'error',
 }
 
-export default Button;
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonType;
+}
+
+export function Button({
+  className,
+  children,
+  disabled,
+  variant,
+  ...buttonProps
+}: ButtonProps) {
+  return (
+    <button
+      {...buttonProps}
+      className={classnames(styles.button, className, {
+        [styles.primary]: variant === ButtonType.PRIMARY && !disabled,
+        [styles.error]: variant === ButtonType.ERROR && !disabled,
+        [styles.disabled]: disabled,
+      })}
+    >
+      {children}
+    </button>
+  );
+}
