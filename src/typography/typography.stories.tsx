@@ -14,22 +14,52 @@ const lorem = new LoremIpsum({
   },
 });
 
-function TypographyExample() {
+function AllExamples({ bold }: { bold?: boolean }) {
+  return (
+    <div>
+      <Header.ExtraLarge bold={bold}>
+        The quick brown fox jumps over the lazy dog
+      </Header.ExtraLarge>
+      <Header.Large bold={bold}>
+        The quick brown fox jumps over the lazy dog
+      </Header.Large>
+      <Header.Medium bold={bold}>
+        The quick brown fox jumps over the lazy dog
+      </Header.Medium>
+      <Header.Small bold={bold}>
+        The quick brown fox jumps over the lazy dog
+      </Header.Small>
+      <Header.ExtraSmall bold={bold}>
+        The quick brown fox jumps over the lazy dog
+      </Header.ExtraSmall>
+      <Paragraph.Medium>
+        The quick brown fox jumps over the lazy dog
+      </Paragraph.Medium>
+    </div>
+  );
+}
+
+function ParagraphExample() {
   return (
     <div>
       <Header.Large bold>{lorem.generateWords(4)}</Header.Large>
-      <Paragraph.Medium>{lorem.generateParagraphs(3)}</Paragraph.Medium>
+      <Paragraph.Medium>{lorem.generateSentences(16)}</Paragraph.Medium>
+      <Paragraph.Medium>{lorem.generateSentences(14)}</Paragraph.Medium>
+      <Paragraph.Medium>{lorem.generateSentences(18)}</Paragraph.Medium>
+      <Header.Large bold>{lorem.generateWords(4)}</Header.Large>
+      <Paragraph.Medium>{lorem.generateSentences(1)}</Paragraph.Medium>
     </div>
   );
 }
 
 export default {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docs/react/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
-   */
   title: 'Base Components/Typography',
-  component: TypographyExample,
+  component: AllExamples,
 };
 
-export const Simple = TypographyExample.bind({});
+export const WithAllExamples = AllExamples.bind({});
+WithAllExamples.args = {
+  bold: true,
+};
+
+export const ExampleWithParagraphs = ParagraphExample.bind({});

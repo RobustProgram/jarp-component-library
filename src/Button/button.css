@@ -1,4 +1,4 @@
-@value grey300, grey500, primary100, primary500, primary700, red100, red500, red700 from '../colors/colors.css';
+@value grey100, grey300, primary100, primary500, primary700, red100, red500, red700 from '../colors/colors.css';
 @value textBody from '../typography/typography.css';
 
 .button {
@@ -38,8 +38,8 @@
 
 .button.disabled,
 .button:disabled {
-  background-color: grey500;
-  border: 0.125rem solid grey500;
-  color: grey300;
+  background-color: grey300;
+  border: 0.125rem solid grey300;
+  color: grey100;
   cursor: default;
 }

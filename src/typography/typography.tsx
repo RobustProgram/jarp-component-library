@@ -8,6 +8,14 @@ interface HeaderProps {
 }
 
 export namespace Header {
+  export function ExtraLarge({ bold, children }: HeaderProps) {
+    return (
+      <h1 className={classnames(styles.textHeader, { [styles.bold]: bold })}>
+        {children}
+      </h1>
+    );
+  }
+
   export function Large({ bold, children }: HeaderProps) {
     return (
       <h2 className={classnames(styles.textHeader, { [styles.bold]: bold })}>
@@ -21,6 +29,22 @@ export namespace Header {
       <h3 className={classnames(styles.textHeader, { [styles.bold]: bold })}>
         {children}
       </h3>
+    );
+  }
+
+  export function Small({ bold, children }: HeaderProps) {
+    return (
+      <h4 className={classnames(styles.textHeader, { [styles.bold]: bold })}>
+        {children}
+      </h4>
+    );
+  }
+
+  export function ExtraSmall({ bold, children }: HeaderProps) {
+    return (
+      <h5 className={classnames(styles.textHeader, { [styles.bold]: bold })}>
+        {children}
+      </h5>
     );
   }
 }
