@@ -65,7 +65,7 @@ module.exports = {
     },
   },
   ignorePatterns: [
-    'serviceWorker.js',
+    'webpack.config.js',
     '.eslintrc.js',
     '*.scss',
     '*.svg',
