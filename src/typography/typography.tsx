@@ -7,6 +7,7 @@ interface HeaderProps {
   children?: React.ReactNode;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Header {
   export function ExtraLarge({ bold, children }: HeaderProps) {
     return (
@@ -53,6 +54,7 @@ interface ParagraphProps {
   children?: React.ReactNode;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-namespace
 export namespace Paragraph {
   export function Medium({ children }: ParagraphProps) {
     return <p className={styles.textMedium}>{children}</p>;

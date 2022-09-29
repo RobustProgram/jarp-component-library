@@ -64,5 +64,12 @@ module.exports = {
       version: 'detect',
     },
   },
-  ignorePatterns: ['serviceWorker.js', '.eslintrc.js', '*.scss', '*.svg'],
+  ignorePatterns: [
+    'serviceWorker.js',
+    '.eslintrc.js',
+    '*.scss',
+    '*.svg',
+    'dist/',
+    '*.stories.tsx',
+  ],
 };
