@@ -1,6 +1,6 @@
 {
   "name": "jarp-component-library",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A simple component library for personal use'",
   "main": "dist/index.js",
   "repository": "git@github.com:RobustProgram/jarp-component-library.git",

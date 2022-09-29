@@ -1,5 +1,6 @@
 import { Button } from './button/button';
+import { Header, Paragraph } from './typography/typography';
 
-export default {
-  Button,
-};
+const Text = { Header, Paragraph };
+
+export { Button, Text };
