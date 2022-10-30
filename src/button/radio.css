@@ -1,0 +1,53 @@
+@value grey100, grey300, primary100, primary500, primary700, red100, red500, red700 from '../colors/colors.css';
+
+.radioButton {
+  background: none;
+  border: 2px solid primary500;
+  border-radius: 100%;
+  color: primary500;
+  padding: 10px;
+  height: 36px;
+  width: 36px;
+}
+
+.radioButton:hover {
+  border: 2px solid primary700;
+  color: primary700;
+  cursor: pointer;
+}
+
+.radioButton.primary {
+  border: 2px solid primary500;
+  background: primary500;
+  border-radius: 100%;
+  color: primary100;
+}
+
+.radioButton.primary:hover {
+  border: 2px solid primary700;
+  background: primary700;
+  color: primary100;
+  cursor: pointer;
+}
+
+.radioButton.danger {
+  border: 2px solid red500;
+  background: red500;
+  border-radius: 100%;
+  color: red100;
+}
+
+.radioButton.danger:hover {
+  border: 2px solid red700;
+  background: red700;
+  color: red100;
+  cursor: pointer;
+}
+
+.radioButton.disabled,
+.radioButton:disabled {
+  background-color: grey300;
+  border: 0.125rem solid grey300;
+  color: grey100;
+  cursor: default;
+}

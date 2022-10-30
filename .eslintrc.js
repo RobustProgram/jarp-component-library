@@ -49,6 +49,7 @@ module.exports = {
       rules: {
         indent: 'off',
         '@typescript-eslint/indent': 'off',
+        'react/prop-types': 0,
       },
       parserOptions: {
         project: ['./tsconfig.json'],

@@ -1,6 +1,6 @@
 {
   "name": "jarp-component-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple component library for personal use'",
   "main": "dist/index.js",
   "repository": "git@github.com:RobustProgram/jarp-component-library.git",
@@ -38,6 +38,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "path": "^0.12.7",
     "prettier": "^2.7.1",
+    "react-dom": "^18.2.0",
     "style-loader": "^3.3.1",
     "ts-loader": "^9.4.1",
     "typescript": "^4.8.3",

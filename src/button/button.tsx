@@ -27,6 +27,7 @@ export function Button({
         [styles.error]: variant === ButtonType.ERROR && !disabled,
         [styles.disabled]: disabled,
       })}
+      disabled={disabled}
     >
       {children}
     </button>
